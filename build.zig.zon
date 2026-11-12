@@ -1,0 +1,13 @@
+.{
+    .name = .zig_gmp,
+    .version = "0.0.1",
+    .dependencies = .{
+        .gmp = .{
+            .url = "https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz",
+            .hash = "N-V-__8AAE5fAwHUYgLBeqNatYSKf3qBK3l8nwdpjyY8igK0",
+        },
+    },
+    .minimum_zig_version = "0.17.0",
+    .paths = .{""},
+    .fingerprint = 0x8f3d0353dfe84db1,
+}
