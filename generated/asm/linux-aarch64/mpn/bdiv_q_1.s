@@ -72,9 +72,9 @@ __gmpn_bdiv_q_1:
 	clz	x5, x6
 	lsr	x3, x3, x5
 
-	adrp	x7, __gmp_binvert_limb_table
+	adrp	x7, :got:__gmp_binvert_limb_table
 	ubfx	x6, x3, 1, 7
-	add	x7, x7, :lo12:__gmp_binvert_limb_table
+	ldr	x7, [x7, #:got_lo12:__gmp_binvert_limb_table]
 	ldrb	w6, [x7, x6]
 	ubfiz	x7, x6, 1, 8
 	umull	x6, w6, w6

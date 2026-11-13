@@ -111,26 +111,35 @@ ___gmpn_mul_1_coreibwl:
 	and	$7, %r8d		
 	mov	%r10, %rdx
 	lea	Ltab(%rip), %r10
-
-	jmp	*(%r10,%r8,8)
+	movslq	(%r10,%r8,4), %r8
+	lea	(%r8, %r10), %r10
+	jmp	*%r10
 
 	.text
 	.align	3
-Ltab:	.quad	Lf0
+Ltab:	.set	Lf0_tmp, Lf0-Ltab
+	.long	Lf0_tmp
 
-	.quad	Lf1
+	.set	Lf1_tmp, Lf1-Ltab
+	.long	Lf1_tmp
 
-	.quad	Lf2
+	.set	Lf2_tmp, Lf2-Ltab
+	.long	Lf2_tmp
 
-	.quad	Lf3
+	.set	Lf3_tmp, Lf3-Ltab
+	.long	Lf3_tmp
 
-	.quad	Lf4
+	.set	Lf4_tmp, Lf4-Ltab
+	.long	Lf4_tmp
 
-	.quad	Lf5
+	.set	Lf5_tmp, Lf5-Ltab
+	.long	Lf5_tmp
 
-	.quad	Lf6
+	.set	Lf6_tmp, Lf6-Ltab
+	.long	Lf6_tmp
 
-	.quad	Lf7
+	.set	Lf7_tmp, Lf7-Ltab
+	.long	Lf7_tmp
 
 	.text
 

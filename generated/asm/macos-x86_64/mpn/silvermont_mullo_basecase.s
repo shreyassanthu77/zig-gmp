@@ -117,18 +117,23 @@ ___gmpn_mullo_basecase_silvermont:
 	mov	(%rdx), %r8		
 
 	lea	Ltab(%rip), %r9
-
-	jmp	*(%r9,%rcx,8)
+	movslq	(%r9,%rcx,4), %r10
+	add	%r10, %r9
+	jmp	*%r9
 
 	.text
 	.align	3
-Ltab:	.quad	Ltab
+Ltab:	.set	Ltab_tmp, Ltab-Ltab
+	.long	Ltab_tmp
 			
-	.quad	L1
+	.set	L1_tmp, L1-Ltab
+	.long	L1_tmp
 			
-	.quad	L2
+	.set	L2_tmp, L2-Ltab
+	.long	L2_tmp
 			
-	.quad	L3
+	.set	L3_tmp, L3-Ltab
+	.long	L3_tmp
 			
 	.text
 

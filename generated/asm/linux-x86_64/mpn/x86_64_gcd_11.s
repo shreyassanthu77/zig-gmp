@@ -240,7 +240,8 @@ ctz_table:
 __gmpn_gcd_11_x86_64:
 
 	
-	lea	ctz_table(%rip), %r8
+	mov	ctz_table@GOTPCREL(%rip), %r8
+
 
 	jmp	.Lent
 

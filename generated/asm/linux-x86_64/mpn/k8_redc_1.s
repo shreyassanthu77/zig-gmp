@@ -133,19 +133,21 @@ __gmpn_redc_1_k8:
 	cmovg	%r9, %rax
 	lea	.Ltab(%rip), %r9
 
-	jmp	*(%r9,%rax,8)
+	movslq	(%r9,%rax,4), %rax
+	add	%r9, %rax
+	jmp	*%rax
 
 
 	.section	.data.rel.ro.local,"a",@progbits
 	.align	8, 0x90
-.Ltab:	.quad	.L0
-	.quad	.L1
-	.quad	.L2
-	.quad	.L3
-	.quad	.L0m4
-	.quad	.L1m4
-	.quad	.L2m4
-	.quad	.L3m4
+.Ltab:	.long	.L0-.Ltab
+	.long	.L1-.Ltab
+	.long	.L2-.Ltab
+	.long	.L3-.Ltab
+	.long	.L0m4-.Ltab
+	.long	.L1m4-.Ltab
+	.long	.L2m4-.Ltab
+	.long	.L3m4-.Ltab
 	.text
 
 	.align	16, 0x90

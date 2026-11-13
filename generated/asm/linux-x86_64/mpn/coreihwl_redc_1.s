@@ -444,7 +444,7 @@ __gmpn_redc_1_coreihwl:
 	
 
 	
-	call	__gmpn_add_n
+	call	__gmpn_add_n@PLT
 
 
 	lea	8(%rsp), %rsp	

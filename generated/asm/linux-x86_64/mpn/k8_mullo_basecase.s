@@ -104,15 +104,16 @@ __gmpn_mullo_basecase_k8:
 	mov	(%rdx), %r8		
 
 	lea	.Ltab(%rip), %r9
-
-	jmp	*(%r9,%rcx,8)
+	movslq	(%r9,%rcx,4), %r10
+	add	%r10, %r9
+	jmp	*%r9
 
 	.section	.data.rel.ro.local,"a",@progbits
 	.align	8, 0x90
-.Ltab:	.quad	.Ltab			
-	.quad	.L1			
-	.quad	.L2			
-	.quad	.L3			
+.Ltab:	.long	.Ltab-.Ltab			
+	.long	.L1-.Ltab			
+	.long	.L2-.Ltab			
+	.long	.L3-.Ltab			
 	.text
 
 .L1:	imul	%r8, %rax

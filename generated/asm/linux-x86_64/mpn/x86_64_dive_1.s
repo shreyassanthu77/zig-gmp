@@ -99,7 +99,8 @@ __gmpn_divexact_1_x86_64:
 	shr	%eax
 	and	$127, %eax		
 
-	lea	__gmp_binvert_limb_table(%rip), %rdx
+	mov	__gmp_binvert_limb_table@GOTPCREL(%rip), %rdx
+
 
 
 	movzbl	(%rdx,%rax), %eax	

@@ -117,7 +117,8 @@ __gmpn_modexact_1c_odd_x86_64:
 	mov	%rdx, %r8		
 	shr	%edx		
 
-	lea	__gmp_binvert_limb_table(%rip), %r9
+	mov	__gmp_binvert_limb_table@GOTPCREL(%rip), %r9
+
 
 
 	and	$127, %edx

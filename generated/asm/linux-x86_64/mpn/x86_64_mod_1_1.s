@@ -225,7 +225,7 @@ __gmpn_mod_1_1p_cps_x86_64:
 	
 
 	
-	call	__gmpn_invert_limb
+	call	__gmpn_invert_limb@PLT
 
 
 	neg	%r12

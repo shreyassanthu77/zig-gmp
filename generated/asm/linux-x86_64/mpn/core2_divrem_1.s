@@ -176,7 +176,7 @@ __gmpn_divrem_1_core2:
 
 
 	
-	call	__gmpn_invert_limb
+	call	__gmpn_invert_limb@PLT
 
 	add	$8, %rsp	
 

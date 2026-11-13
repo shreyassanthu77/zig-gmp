@@ -155,28 +155,38 @@ Ltop:
 
 Lend:
 	lea	Ltab(%rip), %r8
-
-	jmp	*72(%r8,%rsi,8)
+	movslq	36(%r8,%rsi,4), %r10
+	add	%r10, %r8
+	jmp	*%r8
 
 	.text
 	.align	3
-Ltab:	.quad	L0
+Ltab:	.set	L0_tmp, L0-Ltab
+	.long	L0_tmp
 
-	.quad	L1
+	.set	L1_tmp, L1-Ltab
+	.long	L1_tmp
 
-	.quad	L2
+	.set	L2_tmp, L2-Ltab
+	.long	L2_tmp
 
-	.quad	L3
+	.set	L3_tmp, L3-Ltab
+	.long	L3_tmp
 
-	.quad	L4
+	.set	L4_tmp, L4-Ltab
+	.long	L4_tmp
 
-	.quad	L5
+	.set	L5_tmp, L5-Ltab
+	.long	L5_tmp
 
-	.quad	L6
+	.set	L6_tmp, L6-Ltab
+	.long	L6_tmp
 
-	.quad	L7
+	.set	L7_tmp, L7-Ltab
+	.long	L7_tmp
 
-	.quad	L8
+	.set	L8_tmp, L8-Ltab
+	.long	L8_tmp
 
 	.text
 

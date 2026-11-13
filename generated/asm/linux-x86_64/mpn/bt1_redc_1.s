@@ -285,7 +285,7 @@ __gmpn_redc_1_bt1:
 	sub	$8, %rsp	
 
 	
-	call	__gmpn_add_n
+	call	__gmpn_add_n@PLT
 
 	add	$8, %rsp	
 

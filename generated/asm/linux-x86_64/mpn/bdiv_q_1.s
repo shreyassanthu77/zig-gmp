@@ -95,7 +95,8 @@ __gmpn_bdiv_q_1:
 	shr	%eax
 	and	$127, %eax		
 
-	lea	__gmp_binvert_limb_table(%rip), %rdx
+	mov	__gmp_binvert_limb_table@GOTPCREL(%rip), %rdx
+
 
 
 	movzbl	(%rdx,%rax), %eax	

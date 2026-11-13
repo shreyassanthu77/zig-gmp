@@ -63,445 +63,482 @@
 
 
 
-	.align	3
+	.align	4
 	.globl	___gmpn_add_n
 	
 	
 ___gmpn_add_n:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*0(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_addlsh1_n
 	
 	
 ___gmpn_addlsh1_n:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*8(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_addlsh2_n
 	
 	
 ___gmpn_addlsh2_n:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*16(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_addmul_1
 	
 	
 ___gmpn_addmul_1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*24(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_addmul_2
 	
 	
 ___gmpn_addmul_2:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*32(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_bdiv_dbm1c
 	
 	
 ___gmpn_bdiv_dbm1c:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*40(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_cnd_add_n
 	
 	
 ___gmpn_cnd_add_n:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*48(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_cnd_sub_n
 	
 	
 ___gmpn_cnd_sub_n:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*56(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_com
 	
 	
 ___gmpn_com:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*64(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_copyd
 	
 	
 ___gmpn_copyd:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*72(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_copyi
 	
 	
 ___gmpn_copyi:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*80(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_divexact_1
 	
 	
 ___gmpn_divexact_1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*88(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_divrem_1
 	
 	
 ___gmpn_divrem_1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*96(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_gcd_11
 	
 	
 ___gmpn_gcd_11:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*104(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_lshift
 	
 	
 ___gmpn_lshift:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*112(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_lshiftc
 	
 	
 ___gmpn_lshiftc:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*120(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mod_1
 	
 	
 ___gmpn_mod_1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*128(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mod_1_1p
 	
 	
 ___gmpn_mod_1_1p:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*136(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mod_1_1p_cps
 	
 	
 ___gmpn_mod_1_1p_cps:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*144(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mod_1s_2p
 	
 	
 ___gmpn_mod_1s_2p:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*152(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mod_1s_2p_cps
 	
 	
 ___gmpn_mod_1s_2p_cps:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*160(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mod_1s_4p
 	
 	
 ___gmpn_mod_1s_4p:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*168(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mod_1s_4p_cps
 	
 	
 ___gmpn_mod_1s_4p_cps:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*176(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mod_34lsub1
 	
 	
 ___gmpn_mod_34lsub1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*184(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_modexact_1c_odd
 	
 	
 ___gmpn_modexact_1c_odd:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*192(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mul_1
 	
 	
 ___gmpn_mul_1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*200(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mul_basecase
 	
 	
 ___gmpn_mul_basecase:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*208(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_mullo_basecase
 	
 	
 ___gmpn_mullo_basecase:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*216(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_preinv_divrem_1
 	
 	
 ___gmpn_preinv_divrem_1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*224(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_preinv_mod_1
 	
 	
 ___gmpn_preinv_mod_1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*232(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_redc_1
 	
 	
 ___gmpn_redc_1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*240(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_redc_2
 	
 	
 ___gmpn_redc_2:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*248(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_rshift
 	
 	
 ___gmpn_rshift:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*256(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_sqr_basecase
 	
 	
 ___gmpn_sqr_basecase:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*264(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_sub_n
 	
 	
 ___gmpn_sub_n:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*272(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_sublsh1_n
 	
 	
 ___gmpn_sublsh1_n:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*280(%rax)
 
 	
 
-	.align	3
+	.align	4
 	.globl	___gmpn_submul_1
 	
 	
 ___gmpn_submul_1:
 
-	movabs	$___gmpn_cpuvec, %rax
+	lea	___gmpn_cpuvec(%rip), %rax
+
 
 	jmp	*288(%rax)
 
@@ -872,7 +909,8 @@ Lfat_init:
 	pop	%rsi	
 	pop	%rdi	
 
-	movabs	$___gmpn_cpuvec, %r10
+	lea	___gmpn_cpuvec(%rip), %r10
+
 
 	jmp	*(%r10,%rax,8)
 

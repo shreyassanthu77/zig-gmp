@@ -95,7 +95,8 @@ Lodd:	mov	%rax, %rbx
 	shr	%eax
 	and	$127, %eax		
 
-	movabs	$___gmp_binvert_limb_table, %rdx
+	lea	___gmp_binvert_limb_table(%rip), %rdx
+
 
 
 	movzbl	(%rdx,%rax), %eax	

@@ -372,7 +372,8 @@ ctz_table:
 ___gmpn_gcd_11_bt1:
 
 	
-	movabs	$ctz_table, %r10
+	lea	ctz_table(%rip), %r10
+
 
 	mov	%rsi, %rdx
 	sub	%rdi, %rdx

@@ -178,8 +178,9 @@ Lgen:
 	lea	8(%r14), %r14
 
 	lea	Lmtab(%rip), %r10
-
-	jmp	*(%r10,%rax,8)
+	movslq	(%r10,%rax,4), %r11
+	lea	(%r11, %r10), %r10
+	jmp	*%r10
 
 
 Lmf0:	.byte	0xc4,98,171,0xf6,30
@@ -267,8 +268,8 @@ Lm1end:
 	jz	Ldone
 
 	lea	Latab(%rip), %r10
-
-	mov	(%r10,%rax,8), %rax
+	movslq	(%r10,%rax,4), %rax
+	lea	(%rax, %r10), %rax
 
 
 Louter:
@@ -370,37 +371,53 @@ Lb3:	.byte	0xf3,76,0x0f,0x38,0xf6,103,48
 
 	.text
 	.align	3
-Lmtab:.quad	Lmf0
+Lmtab:.set	Lmf0_tmp, Lmf0-Lmtab
+	.long	Lmf0_tmp
 
-	.quad	Lmf1
+	.set	Lmf1_tmp, Lmf1-Lmtab
+	.long	Lmf1_tmp
 
-	.quad	Lmf2
+	.set	Lmf2_tmp, Lmf2-Lmtab
+	.long	Lmf2_tmp
 
-	.quad	Lmf3
+	.set	Lmf3_tmp, Lmf3-Lmtab
+	.long	Lmf3_tmp
 
-	.quad	Lmf4
+	.set	Lmf4_tmp, Lmf4-Lmtab
+	.long	Lmf4_tmp
 
-	.quad	Lmf5
+	.set	Lmf5_tmp, Lmf5-Lmtab
+	.long	Lmf5_tmp
 
-	.quad	Lmf6
+	.set	Lmf6_tmp, Lmf6-Lmtab
+	.long	Lmf6_tmp
 
-	.quad	Lmf7
+	.set	Lmf7_tmp, Lmf7-Lmtab
+	.long	Lmf7_tmp
 
-Latab:.quad	Lf0
+Latab:.set	Lf0_tmp, Lf0-Latab
+	.long	Lf0_tmp
 
-	.quad	Lf1
+	.set	Lf1_tmp, Lf1-Latab
+	.long	Lf1_tmp
 
-	.quad	Lf2
+	.set	Lf2_tmp, Lf2-Latab
+	.long	Lf2_tmp
 
-	.quad	Lf3
+	.set	Lf3_tmp, Lf3-Latab
+	.long	Lf3_tmp
 
-	.quad	Lf4
+	.set	Lf4_tmp, Lf4-Latab
+	.long	Lf4_tmp
 
-	.quad	Lf5
+	.set	Lf5_tmp, Lf5-Latab
+	.long	Lf5_tmp
 
-	.quad	Lf6
+	.set	Lf6_tmp, Lf6-Latab
+	.long	Lf6_tmp
 
-	.quad	Lf7
+	.set	Lf7_tmp, Lf7-Latab
+	.long	Lf7_tmp
 
 	.text
 	

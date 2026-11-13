@@ -117,10 +117,17 @@ extract() { # name arch os abi host target fat cflag variant
     # mpn: configure links each object to the C or assembly it selected.
     objects=$(makevar "$b/mpn" '$(mpn_objects)')
     [ -n "$objects" ] || die "$name: empty mpn_objects"
+    # Position-independent assembly, as libtool's PIC objects: the library
+    # is built with -fPIC and may be linked into a shared object, where
+    # direct references to GMP's global data (__gmpn_cpuvec, the tables)
+    # can't be resolved. Windows code is relocatable without it, and there
+    # PIC goes with DLL_EXPORT, for a DLL.
+    pic=-DPIC
+    [ "$os" = windows ] && pic=
     for o in $objects; do
         o=${o%.lo}
         if [ -e "$b/mpn/$o.asm" ]; then
-            (cd "$b/mpn" && m4 -DHAVE_CONFIG_H -D__GMP_WITHIN_GMP "-DOPERATION_$o" "$o.asm") >"$work/tmp.s"
+            (cd "$b/mpn" && m4 -DHAVE_CONFIG_H -D__GMP_WITHIN_GMP $pic "-DOPERATION_$o" "$o.asm") >"$work/tmp.s"
             if [ "$os" = linux ]; then
                 [ -z "$(tail -c 1 "$work/tmp.s")" ] || echo >>"$work/tmp.s"
                 printf '\t.section .note.GNU-stack,"",@progbits\n' >>"$work/tmp.s"

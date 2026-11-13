@@ -117,7 +117,8 @@ Lent:
 	mov	%rdx, %r8		
 	shr	%edx		
 
-	movabs	$___gmp_binvert_limb_table, %r9
+	lea	___gmp_binvert_limb_table(%rip), %r9
+
 
 
 	and	$127, %edx

@@ -116,7 +116,9 @@ ___gmpn_sub_nc_coreihwl:
 	lea	Ltab(%rip), %r9
 	neg	%r8			
 
-	jmp	*(%r9,%rax,8)
+	movslq	(%r9,%rax,4), %rax
+	lea	(%r9,%rax), %rax	
+	jmp	*%rax
 
 	
 
@@ -134,7 +136,9 @@ ___gmpn_sub_n_coreihwl:
 
 	lea	Ltab(%rip), %r9
 
-	jmp	*(%r9,%rax,8)
+	movslq	(%r9,%rax,4), %rax
+	lea	(%r9,%rax), %rax	
+	jmp	*%rax
 
 
 L0:	mov	(%rsi), %r8
@@ -273,21 +277,29 @@ Lx2:	mov	%r10, (%rdi)
 	
 	.text
 	.align	3
-Ltab:	.quad	L0
+Ltab:	.set	L0_tmp, L0-Ltab
+	.long	L0_tmp
 
-	.quad	L1
+	.set	L1_tmp, L1-Ltab
+	.long	L1_tmp
 
-	.quad	L2
+	.set	L2_tmp, L2-Ltab
+	.long	L2_tmp
 
-	.quad	L3
+	.set	L3_tmp, L3-Ltab
+	.long	L3_tmp
 
-	.quad	L4
+	.set	L4_tmp, L4-Ltab
+	.long	L4_tmp
 
-	.quad	L5
+	.set	L5_tmp, L5-Ltab
+	.long	L5_tmp
 
-	.quad	L6
+	.set	L6_tmp, L6-Ltab
+	.long	L6_tmp
 
-	.quad	L7
+	.set	L7_tmp, L7-Ltab
+	.long	L7_tmp
 
 
 

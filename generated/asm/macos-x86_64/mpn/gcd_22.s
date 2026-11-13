@@ -363,7 +363,8 @@ ___gmpn_gcd_22:
 	
 	mov	%rcx, %rax
 
-	movabs	$ctz_table, %r10
+	lea	ctz_table(%rip), %r10
+
 
 
 	.align	4

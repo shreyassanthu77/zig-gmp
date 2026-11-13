@@ -147,26 +147,36 @@ ___gmpn_redc_1_goldmont:
 	cmovg	%r9, %rax
 	lea	Ltab(%rip), %r9
 
-	jmp	*(%r9,%rax,8)
+	movslq	(%r9,%rax,4), %rax
+	add	%r9, %rax
+	jmp	*%rax
 
 
 	.text
 	.align	3
-Ltab:	.quad	L0
+Ltab:	.set	L0_tmp, L0-Ltab
+	.long	L0_tmp
 
-	.quad	L1
+	.set	L1_tmp, L1-Ltab
+	.long	L1_tmp
 
-	.quad	L2
+	.set	L2_tmp, L2-Ltab
+	.long	L2_tmp
 
-	.quad	L3
+	.set	L3_tmp, L3-Ltab
+	.long	L3_tmp
 
-	.quad	L0m4
+	.set	L0m4_tmp, L0m4-Ltab
+	.long	L0m4_tmp
 
-	.quad	L1m4
+	.set	L1m4_tmp, L1m4-Ltab
+	.long	L1m4_tmp
 
-	.quad	L2m4
+	.set	L2m4_tmp, L2m4-Ltab
+	.long	L2m4_tmp
 
-	.quad	L3m4
+	.set	L3m4_tmp, L3m4-Ltab
+	.long	L3m4_tmp
 
 	.text
 

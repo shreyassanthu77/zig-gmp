@@ -363,7 +363,8 @@ __gmpn_gcd_22:
 	
 	mov	%rcx, %rax
 
-	lea	ctz_table(%rip), %r10
+	mov	ctz_table@GOTPCREL(%rip), %r10
+
 
 
 	.align	16, 0x90
@@ -403,7 +404,7 @@ __gmpn_gcd_22:
 .Lgcd_11:
 	mov	%rax, %rdi
 
-	jmp	__gmpn_gcd_11
+	jmp	__gmpn_gcd_11@PLT
 
 
 .Lcount_better:

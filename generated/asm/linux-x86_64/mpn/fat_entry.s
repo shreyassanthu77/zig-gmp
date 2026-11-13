@@ -63,445 +63,482 @@
 
 
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_add_n
 	.type	__gmpn_add_n,@function
 	
 __gmpn_add_n:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*0(%rax)
 
 	.size	__gmpn_add_n,.-__gmpn_add_n
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_addlsh1_n
 	.type	__gmpn_addlsh1_n,@function
 	
 __gmpn_addlsh1_n:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*8(%rax)
 
 	.size	__gmpn_addlsh1_n,.-__gmpn_addlsh1_n
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_addlsh2_n
 	.type	__gmpn_addlsh2_n,@function
 	
 __gmpn_addlsh2_n:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*16(%rax)
 
 	.size	__gmpn_addlsh2_n,.-__gmpn_addlsh2_n
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_addmul_1
 	.type	__gmpn_addmul_1,@function
 	
 __gmpn_addmul_1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*24(%rax)
 
 	.size	__gmpn_addmul_1,.-__gmpn_addmul_1
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_addmul_2
 	.type	__gmpn_addmul_2,@function
 	
 __gmpn_addmul_2:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*32(%rax)
 
 	.size	__gmpn_addmul_2,.-__gmpn_addmul_2
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_bdiv_dbm1c
 	.type	__gmpn_bdiv_dbm1c,@function
 	
 __gmpn_bdiv_dbm1c:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*40(%rax)
 
 	.size	__gmpn_bdiv_dbm1c,.-__gmpn_bdiv_dbm1c
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_cnd_add_n
 	.type	__gmpn_cnd_add_n,@function
 	
 __gmpn_cnd_add_n:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*48(%rax)
 
 	.size	__gmpn_cnd_add_n,.-__gmpn_cnd_add_n
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_cnd_sub_n
 	.type	__gmpn_cnd_sub_n,@function
 	
 __gmpn_cnd_sub_n:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*56(%rax)
 
 	.size	__gmpn_cnd_sub_n,.-__gmpn_cnd_sub_n
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_com
 	.type	__gmpn_com,@function
 	
 __gmpn_com:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*64(%rax)
 
 	.size	__gmpn_com,.-__gmpn_com
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_copyd
 	.type	__gmpn_copyd,@function
 	
 __gmpn_copyd:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*72(%rax)
 
 	.size	__gmpn_copyd,.-__gmpn_copyd
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_copyi
 	.type	__gmpn_copyi,@function
 	
 __gmpn_copyi:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*80(%rax)
 
 	.size	__gmpn_copyi,.-__gmpn_copyi
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_divexact_1
 	.type	__gmpn_divexact_1,@function
 	
 __gmpn_divexact_1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*88(%rax)
 
 	.size	__gmpn_divexact_1,.-__gmpn_divexact_1
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_divrem_1
 	.type	__gmpn_divrem_1,@function
 	
 __gmpn_divrem_1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*96(%rax)
 
 	.size	__gmpn_divrem_1,.-__gmpn_divrem_1
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_gcd_11
 	.type	__gmpn_gcd_11,@function
 	
 __gmpn_gcd_11:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*104(%rax)
 
 	.size	__gmpn_gcd_11,.-__gmpn_gcd_11
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_lshift
 	.type	__gmpn_lshift,@function
 	
 __gmpn_lshift:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*112(%rax)
 
 	.size	__gmpn_lshift,.-__gmpn_lshift
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_lshiftc
 	.type	__gmpn_lshiftc,@function
 	
 __gmpn_lshiftc:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*120(%rax)
 
 	.size	__gmpn_lshiftc,.-__gmpn_lshiftc
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mod_1
 	.type	__gmpn_mod_1,@function
 	
 __gmpn_mod_1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*128(%rax)
 
 	.size	__gmpn_mod_1,.-__gmpn_mod_1
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mod_1_1p
 	.type	__gmpn_mod_1_1p,@function
 	
 __gmpn_mod_1_1p:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*136(%rax)
 
 	.size	__gmpn_mod_1_1p,.-__gmpn_mod_1_1p
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mod_1_1p_cps
 	.type	__gmpn_mod_1_1p_cps,@function
 	
 __gmpn_mod_1_1p_cps:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*144(%rax)
 
 	.size	__gmpn_mod_1_1p_cps,.-__gmpn_mod_1_1p_cps
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mod_1s_2p
 	.type	__gmpn_mod_1s_2p,@function
 	
 __gmpn_mod_1s_2p:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*152(%rax)
 
 	.size	__gmpn_mod_1s_2p,.-__gmpn_mod_1s_2p
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mod_1s_2p_cps
 	.type	__gmpn_mod_1s_2p_cps,@function
 	
 __gmpn_mod_1s_2p_cps:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*160(%rax)
 
 	.size	__gmpn_mod_1s_2p_cps,.-__gmpn_mod_1s_2p_cps
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mod_1s_4p
 	.type	__gmpn_mod_1s_4p,@function
 	
 __gmpn_mod_1s_4p:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*168(%rax)
 
 	.size	__gmpn_mod_1s_4p,.-__gmpn_mod_1s_4p
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mod_1s_4p_cps
 	.type	__gmpn_mod_1s_4p_cps,@function
 	
 __gmpn_mod_1s_4p_cps:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*176(%rax)
 
 	.size	__gmpn_mod_1s_4p_cps,.-__gmpn_mod_1s_4p_cps
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mod_34lsub1
 	.type	__gmpn_mod_34lsub1,@function
 	
 __gmpn_mod_34lsub1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*184(%rax)
 
 	.size	__gmpn_mod_34lsub1,.-__gmpn_mod_34lsub1
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_modexact_1c_odd
 	.type	__gmpn_modexact_1c_odd,@function
 	
 __gmpn_modexact_1c_odd:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*192(%rax)
 
 	.size	__gmpn_modexact_1c_odd,.-__gmpn_modexact_1c_odd
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mul_1
 	.type	__gmpn_mul_1,@function
 	
 __gmpn_mul_1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*200(%rax)
 
 	.size	__gmpn_mul_1,.-__gmpn_mul_1
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mul_basecase
 	.type	__gmpn_mul_basecase,@function
 	
 __gmpn_mul_basecase:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*208(%rax)
 
 	.size	__gmpn_mul_basecase,.-__gmpn_mul_basecase
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_mullo_basecase
 	.type	__gmpn_mullo_basecase,@function
 	
 __gmpn_mullo_basecase:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*216(%rax)
 
 	.size	__gmpn_mullo_basecase,.-__gmpn_mullo_basecase
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_preinv_divrem_1
 	.type	__gmpn_preinv_divrem_1,@function
 	
 __gmpn_preinv_divrem_1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*224(%rax)
 
 	.size	__gmpn_preinv_divrem_1,.-__gmpn_preinv_divrem_1
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_preinv_mod_1
 	.type	__gmpn_preinv_mod_1,@function
 	
 __gmpn_preinv_mod_1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*232(%rax)
 
 	.size	__gmpn_preinv_mod_1,.-__gmpn_preinv_mod_1
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_redc_1
 	.type	__gmpn_redc_1,@function
 	
 __gmpn_redc_1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*240(%rax)
 
 	.size	__gmpn_redc_1,.-__gmpn_redc_1
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_redc_2
 	.type	__gmpn_redc_2,@function
 	
 __gmpn_redc_2:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*248(%rax)
 
 	.size	__gmpn_redc_2,.-__gmpn_redc_2
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_rshift
 	.type	__gmpn_rshift,@function
 	
 __gmpn_rshift:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*256(%rax)
 
 	.size	__gmpn_rshift,.-__gmpn_rshift
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_sqr_basecase
 	.type	__gmpn_sqr_basecase,@function
 	
 __gmpn_sqr_basecase:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*264(%rax)
 
 	.size	__gmpn_sqr_basecase,.-__gmpn_sqr_basecase
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_sub_n
 	.type	__gmpn_sub_n,@function
 	
 __gmpn_sub_n:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*272(%rax)
 
 	.size	__gmpn_sub_n,.-__gmpn_sub_n
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_sublsh1_n
 	.type	__gmpn_sublsh1_n,@function
 	
 __gmpn_sublsh1_n:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*280(%rax)
 
 	.size	__gmpn_sublsh1_n,.-__gmpn_sublsh1_n
 
-	.align	8, 0x90
+	.align	16, 0x90
 	.globl	__gmpn_submul_1
 	.type	__gmpn_submul_1,@function
 	
 __gmpn_submul_1:
 
-	lea	__gmpn_cpuvec(%rip), %rax
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %rax
+
 
 	jmp	*288(%rax)
 
@@ -862,7 +899,7 @@ __gmpn_submul_1_init:
 	push	%r9
 	push	%rax
 
-	call	__gmpn_cpuvec_init
+	call	__gmpn_cpuvec_init@PLT
 
 
 	pop	%rax
@@ -873,7 +910,8 @@ __gmpn_submul_1_init:
 	pop	%rsi	
 	pop	%rdi	
 
-	lea	__gmpn_cpuvec(%rip), %r10
+	mov	__gmpn_cpuvec@GOTPCREL(%rip), %r10
+
 
 	jmp	*(%r10,%rax,8)
 

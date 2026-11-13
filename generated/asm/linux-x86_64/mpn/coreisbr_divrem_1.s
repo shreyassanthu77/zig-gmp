@@ -190,7 +190,7 @@ __gmpn_divrem_1_coreisbr:
 
 
 	
-	call	__gmpn_invert_limb
+	call	__gmpn_invert_limb@PLT
 
 
 	pop	%r8
@@ -256,7 +256,7 @@ __gmpn_divrem_1_coreisbr:
 
 
 	
-	call	__gmpn_invert_limb
+	call	__gmpn_invert_limb@PLT
 
 	add	$8, %rsp	
 

@@ -154,8 +154,9 @@ __gmpn_mullo_basecase_coreibwl:
 	shr	$3, %ecx
 	and	$7, %eax		
 	lea	.Lmtab(%rip), %r10
-
-	jmp	*(%r10,%rax,8)
+	movslq	(%r10,%rax,4), %rax
+	lea	(%rax, %r10), %r10
+	jmp	*%r10
 
 
 .Lmf0:	.byte	0xc4,98,171,0xf6,6
@@ -409,14 +410,14 @@ __gmpn_mullo_basecase_coreibwl:
 	.size	__gmpn_mullo_basecase_coreibwl,.-__gmpn_mullo_basecase_coreibwl
 	.section	.data.rel.ro.local,"a",@progbits
 	.align	8, 0x90
-.Lmtab:.quad	.Lmf7
-	.quad	.Lmf0
-	.quad	.Lmf1
-	.quad	.Lmf2
-	.quad	.Lmf3
-	.quad	.Lmf4
-	.quad	.Lmf5
-	.quad	.Lmf6
+.Lmtab:.long	.Lmf7-.Lmtab
+	.long	.Lmf0-.Lmtab
+	.long	.Lmf1-.Lmtab
+	.long	.Lmf2-.Lmtab
+	.long	.Lmf3-.Lmtab
+	.long	.Lmf4-.Lmtab
+	.long	.Lmf5-.Lmtab
+	.long	.Lmf6-.Lmtab
 
 
 	.section .note.GNU-stack,"",@progbits

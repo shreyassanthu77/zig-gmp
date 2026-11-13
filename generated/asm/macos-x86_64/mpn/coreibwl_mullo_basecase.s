@@ -154,8 +154,9 @@ Lbig:	push	%r14
 	shr	$3, %ecx
 	and	$7, %eax		
 	lea	Lmtab(%rip), %r10
-
-	jmp	*(%r10,%rax,8)
+	movslq	(%r10,%rax,4), %rax
+	lea	(%rax, %r10), %r10
+	jmp	*%r10
 
 
 Lmf0:	.byte	0xc4,98,171,0xf6,6
@@ -409,21 +410,29 @@ Lc2:
 	
 	.text
 	.align	3
-Lmtab:.quad	Lmf7
+Lmtab:.set	Lmf7_tmp, Lmf7-Lmtab
+	.long	Lmf7_tmp
 
-	.quad	Lmf0
+	.set	Lmf0_tmp, Lmf0-Lmtab
+	.long	Lmf0_tmp
 
-	.quad	Lmf1
+	.set	Lmf1_tmp, Lmf1-Lmtab
+	.long	Lmf1_tmp
 
-	.quad	Lmf2
+	.set	Lmf2_tmp, Lmf2-Lmtab
+	.long	Lmf2_tmp
 
-	.quad	Lmf3
+	.set	Lmf3_tmp, Lmf3-Lmtab
+	.long	Lmf3_tmp
 
-	.quad	Lmf4
+	.set	Lmf4_tmp, Lmf4-Lmtab
+	.long	Lmf4_tmp
 
-	.quad	Lmf5
+	.set	Lmf5_tmp, Lmf5-Lmtab
+	.long	Lmf5_tmp
 
-	.quad	Lmf6
+	.set	Lmf6_tmp, Lmf6-Lmtab
+	.long	Lmf6_tmp
 
 
 

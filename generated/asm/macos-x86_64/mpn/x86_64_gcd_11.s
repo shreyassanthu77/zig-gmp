@@ -240,7 +240,8 @@ ctz_table:
 ___gmpn_gcd_11_x86_64:
 
 	
-	movabs	$ctz_table, %r8
+	lea	ctz_table(%rip), %r8
+
 
 	jmp	Lent
 

@@ -202,8 +202,9 @@ __gmpn_sqr_basecase_coreibwl:
 	mov	(%rsi), %rdx
 
 	lea	.Lmtab(%rip), %r10
-
-	jmp	*(%r10,%rax,8)
+	movslq	(%r10,%rax,4), %r8
+	lea	(%r8, %r10), %r10
+	jmp	*%r10
 
 
 .Lmf0:	.byte	0xc4,98,187,0xf6,202		
@@ -314,8 +315,8 @@ __gmpn_sqr_basecase_coreibwl:
 
 
 	lea	.Latab(%rip), %r10
-
-	mov	(%r10,%rax,8), %r11
+	movslq	(%r10,%rax,4), %r11
+	lea	(%r11, %r10), %r11
 
 	mov	$63, %eax
 	jmp	*%r11
@@ -841,22 +842,22 @@ __gmpn_sqr_basecase_coreibwl:
 
 	.section	.data.rel.ro.local,"a",@progbits
 	.align	8, 0x90
-.Lmtab:.quad	.Lmf7
-	.quad	.Lmf0
-	.quad	.Lmf1
-	.quad	.Lmf2
-	.quad	.Lmf3
-	.quad	.Lmf4
-	.quad	.Lmf5
-	.quad	.Lmf6
-.Latab:.quad	.Lf6
-	.quad	.Lf7
-	.quad	.Lf0
-	.quad	.Lf1
-	.quad	.Lf2
-	.quad	.Lf3
-	.quad	.Lf4
-	.quad	.Lf5
+.Lmtab:.long	.Lmf7-.Lmtab
+	.long	.Lmf0-.Lmtab
+	.long	.Lmf1-.Lmtab
+	.long	.Lmf2-.Lmtab
+	.long	.Lmf3-.Lmtab
+	.long	.Lmf4-.Lmtab
+	.long	.Lmf5-.Lmtab
+	.long	.Lmf6-.Lmtab
+.Latab:.long	.Lf6-.Latab
+	.long	.Lf7-.Latab
+	.long	.Lf0-.Latab
+	.long	.Lf1-.Latab
+	.long	.Lf2-.Latab
+	.long	.Lf3-.Latab
+	.long	.Lf4-.Latab
+	.long	.Lf5-.Latab
 	.text
 	.size	__gmpn_sqr_basecase_coreibwl,.-__gmpn_sqr_basecase_coreibwl
 

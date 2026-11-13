@@ -116,7 +116,7 @@ __gmpn_divrem_2:
 
 
 	
-	call	__gmpn_invert_limb
+	call	__gmpn_invert_limb@PLT
 
 
 	pop	%r11

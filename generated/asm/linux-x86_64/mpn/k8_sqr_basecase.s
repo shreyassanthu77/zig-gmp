@@ -140,19 +140,20 @@ __gmpn_sqr_basecase_k8:
 	cmovg	%r8, %rcx
 
 	lea	.Ltab(%rip), %rax
-
-	jmp	*(%rax,%rcx,8)
+	movslq	(%rax,%rcx,4), %r10
+	add	%r10, %rax
+	jmp	*%rax
 
 	.section	.data.rel.ro.local,"a",@progbits
 	.align	8, 0x90
-.Ltab:	.quad	.L4
-	.quad	.L1
-	.quad	.L2
-	.quad	.L3
-	.quad	.L0m4
-	.quad	.L1m4
-	.quad	.L2m4
-	.quad	.L3m4
+.Ltab:	.long	.L4-.Ltab
+	.long	.L1-.Ltab
+	.long	.L2-.Ltab
+	.long	.L3-.Ltab
+	.long	.L0m4-.Ltab
+	.long	.L1m4-.Ltab
+	.long	.L2m4-.Ltab
+	.long	.L3m4-.Ltab
 	.text
 
 .L1:	mov	(%rsi), %rax

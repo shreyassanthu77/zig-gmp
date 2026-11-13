@@ -116,7 +116,9 @@ __gmpn_add_nc_coreihwl:
 	lea	.Ltab(%rip), %r9
 	neg	%r8			
 
-	jmp	*(%r9,%rax,8)
+	movslq	(%r9,%rax,4), %rax
+	lea	(%r9,%rax), %rax	
+	jmp	*%rax
 
 	.size	__gmpn_add_nc_coreihwl,.-__gmpn_add_nc_coreihwl
 
@@ -134,7 +136,9 @@ __gmpn_add_n_coreihwl:
 
 	lea	.Ltab(%rip), %r9
 
-	jmp	*(%r9,%rax,8)
+	movslq	(%r9,%rax,4), %rax
+	lea	(%r9,%rax), %rax	
+	jmp	*%rax
 
 
 .L0:	mov	(%rsi), %r8
@@ -273,14 +277,14 @@ __gmpn_add_n_coreihwl:
 	.size	__gmpn_add_n_coreihwl,.-__gmpn_add_n_coreihwl
 	.section	.data.rel.ro.local,"a",@progbits
 	.align	8, 0x90
-.Ltab:	.quad	.L0
-	.quad	.L1
-	.quad	.L2
-	.quad	.L3
-	.quad	.L4
-	.quad	.L5
-	.quad	.L6
-	.quad	.L7
+.Ltab:	.long	.L0-.Ltab
+	.long	.L1-.Ltab
+	.long	.L2-.Ltab
+	.long	.L3-.Ltab
+	.long	.L4-.Ltab
+	.long	.L5-.Ltab
+	.long	.L6-.Ltab
+	.long	.L7-.Ltab
 
 
 	.section .note.GNU-stack,"",@progbits

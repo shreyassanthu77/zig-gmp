@@ -111,19 +111,20 @@ __gmpn_mul_1_coreibwl:
 	and	$7, %r8d		
 	mov	%r10, %rdx
 	lea	.Ltab(%rip), %r10
-
-	jmp	*(%r10,%r8,8)
+	movslq	(%r10,%r8,4), %r8
+	lea	(%r8, %r10), %r10
+	jmp	*%r10
 
 	.section	.data.rel.ro.local,"a",@progbits
 	.align	8, 0x90
-.Ltab:	.quad	.Lf0
-	.quad	.Lf1
-	.quad	.Lf2
-	.quad	.Lf3
-	.quad	.Lf4
-	.quad	.Lf5
-	.quad	.Lf6
-	.quad	.Lf7
+.Ltab:	.long	.Lf0-.Ltab
+	.long	.Lf1-.Ltab
+	.long	.Lf2-.Ltab
+	.long	.Lf3-.Ltab
+	.long	.Lf4-.Ltab
+	.long	.Lf5-.Ltab
+	.long	.Lf6-.Ltab
+	.long	.Lf7-.Ltab
 	.text
 
 .Lf0:	.byte	0xc4,98,171,0xf6,6

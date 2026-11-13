@@ -372,7 +372,8 @@ ctz_table:
 __gmpn_gcd_11_bt1:
 
 	
-	lea	ctz_table(%rip), %r10
+	mov	ctz_table@GOTPCREL(%rip), %r10
+
 
 	mov	%rsi, %rdx
 	sub	%rdi, %rdx
